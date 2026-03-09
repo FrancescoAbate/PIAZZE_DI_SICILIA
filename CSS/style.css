@@ -897,6 +897,13 @@ body {
 
 @media (max-width: 480px) {
 
+.piazze-overlay {
+        z-index: 250;
+    }
+
+    .piazze-tendina {
+        z-index: 350;
+    }
     
     .header {
         padding: 0.6rem 1rem 1rem;
@@ -1028,3 +1035,4 @@ body {
         height: 70px;
     }
 }
+

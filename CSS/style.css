@@ -1019,12 +1019,13 @@ body {
     }
 
     
-    .piazze-tendina {
+   .piazze-tendina {
     width: 100%;
     right: -100%;
-    top: auto;
-    bottom: 0;
-    height: 60vh;
+    top: 0;
+    padding-top: 120px;
+    height: 100dvh;
+    overflow-y: auto;
 }
 
 .piazze-tendina--aperta {
@@ -1046,6 +1047,7 @@ body {
         height: 70px;
     }
 }
+
 
 
 

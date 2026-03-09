@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piazze di Sicilia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="header__brand">
+            <span class="header__title">PIAZZE DI SICILIA</span>
+            <img src="IMG/logo.png" alt="Logo Sicilia" class="header__logo">
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">HOME</a></li>
+                <li><a href="#" class="nav__link" id="province-toggle">PROVINCE</a></li>
+                <li><a href="#" class="nav__link" id="piazze-toggle">PIAZZE</a></li>
+                <li><a href="info.html" class="nav__link">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="piazze-overlay" id="province-overlay" onclick="chiudiProvince()"></div>
+    <div class="piazze-tendina" id="province-tendina">
+        <div class="piazze-tendina__header">
+            <span class="piazze-tendina__titolo">A-Z</span>
+            <button class="piazze-tendina__chiudi" onclick="chiudiProvince()">✕</button>
+        </div>
+        <ul class="piazze-tendina__lista">
+            <li><a href="agrigento.html" class="piazze-tendina__link" style="--i:0">AGRIGENTO</a></li>
+            <li><a href="caltanissetta.html" class="piazze-tendina__link" style="--i:1">CALTANISSETTA</a></li>
+            <li><a href="catania.html" class="piazze-tendina__link" style="--i:2">CATANIA</a></li>
+            <li><a href="enna.html" class="piazze-tendina__link" style="--i:3">ENNA</a></li>
+            <li><a href="messina.html" class="piazze-tendina__link" style="--i:4">MESSINA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:5">PALERMO</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:6">RAGUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:7">SIRACUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:8">TRAPANI</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="piazze-overlay" id="piazze-overlay" onclick="chiudiTendina()"></div>
+    <div class="piazze-tendina" id="piazze-tendina">
+        <div class="piazze-tendina__header">
+    <div class="piazze-tendina__filtro-wrap">
+        <button class="piazze-tendina__titolo piazze-tendina__titolo--btn" id="filtro-toggle">A-Z ▾</button>
+        <ul class="filtro-dropdown" id="filtro-dropdown">
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('A-Z')">A-Z</button></li>
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('PER PROVINCIA')">PER PROVINCIA</button></li>
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('PER METRATURA')">PER METRATURA</button></li>
+        </ul>
+    </div>
+    <div class="piazze-tendina__azioni">
+        <button class="piazze-tendina__lente" title="Cerca">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+            </svg>
+        </button>
+        <button class="piazze-tendina__chiudi" onclick="chiudiTendina()">✕</button>
+    </div>
+</div>
+        <ul class="piazze-tendina__lista">
+            <li><a href="piazza_del_duomo.html" class="piazze-tendina__link" style="--i:0">PIAZZA DEL DUOMO - CATANIA</a></li>
+            <li><a href="piazza_duomo_enna.html" class="piazze-tendina__link" style="--i:1">PIAZZA DUOMO - ENNA</a></li>
+            <li><a href="piazza_duomo_messina.html" class="piazze-tendina__link" style="--i:2">PIAZZA DUOMO - MESSINA</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:3">PIAZZA DUOMO DI SAN GIORGIO - RAGUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:4">PIAZZA DUOMO - SIRACUSA</a></li>
+            <li><a href="piazza_garibaldi.html" class="piazze-tendina__link" style="--i:5">PIAZZA GARIBALDI - CALTANISSETTA</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:6">PIAZZA LUCATELLI - TRAPANI</a></li>
+            <li><a href="piazza_pirandello.html" class="piazze-tendina__link" style="--i:7">PIAZZA PIRANDELLO - AGRIGENTO</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:8">PIAZZA PRETORIA - PALERMO</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        
+        <section class="hero">
+            <img src="IMG/hero.jpg" alt="Sicilia" class="hero__img">
+            <div class="hero__overlay"></div>
+            <h1 class="hero__title">PIAZZE DI SICILIA</h1>
+        </section>
+
+        
+        <section class="province">
+            <div class="province__grid">
+
+                
+                <a href="agrigento.html" class="card-link">
+                <article class="card">
+                    <div class="card__header">AGRIGENTO</div>
+                    <img src="IMG/agrigento.jpg" alt="Agrigento" class="card__img">
+                    <p class="card__text">La provincia di Agrigento è famosa per il suo ricco patrimonio storico e archeologico, tra cui la celebre Valle dei Templi.</p>
+                </article>
+                </a>
+
+                
+                <a href="caltanissetta.html" class="card-link">
+                <article class="card">
+                    <div class="card__header">CALTANISSETTA</div>
+                    <img src="IMG/caltanissetta.jpg" alt="Caltanissetta" class="card__img">
+                    <p class="card__text">La provincia di Caltanissetta si trova nel cuore della Sicilia, è caratterizzata da paesaggi collinari, tradizioni storiche e antichi centri abitati.</p>
+                </article>
+                </a>
+
+                
+                <a href="catania.html" class="card-link">
+                <article class="card">
+                    <div class="card__header">CATANIA</div>
+                    <img src="IMG/catania_card.jpeg" alt="Catania" class="card__img">
+                    <p class="card__text">La provincia di Catania, sulla costa orientale della Sicilia, unisce il vulcano Etna, coste ioniche e città storiche ricche di cultura e tradizioni.</p>
+                </article>
+                </a>
+
+                
+                <a href="enna.html" class="card-link">
+                <article class="card">
+                    <div class="card__header">ENNA</div>
+                    <img src="IMG/enna.jpg" alt="Enna" class="card__img">
+                    <p class="card__text">La provincia di Enna, situata nel cuore della Sicilia, è nota per i suoi paesaggi collinari e per i borghi ricchi di storia e tradizioni.</p>
+                </article>
+                </a>
+
+                
+                <a href="messina.html" class="card-link">
+                <article class="card">
+                    <div class="card__header">MESSINA</div>
+                    <img src="IMG/messina.jpg" alt="Messina" class="card__img">
+                    <p class="card__text">La provincia di Messina si affaccia sullo Stretto di Messina, è caratterizzata da paesaggi costieri, borghi storici e importanti tradizioni culturali.</p>
+                </article>
+                </a>
+
+                
+                
+                <article class="card">
+                    <div class="card__header">PALERMO</div>
+                    <img src="IMG/palermo.jpg" alt="Palermo" class="card__img">
+                    <p class="card__text">La provincia di Palermo è nota per il suo ricco patrimonio storico e culturale, con città, piazze e monumenti che raccontano secoli di storia.</p>
+                </article>
+                </a>
+
+                
+                
+                <article class="card">
+                    <div class="card__header">RAGUSA</div>
+                    <img src="IMG/ragusa.jpg" alt="Ragusa" class="card__img">
+                    <p class="card__text">La provincia di Ragusa è famosa per le sue città barocche e i paesaggi della Sicilia sud-orientale.</p>
+                </article>
+                </a>
+
+                
+               
+                <article class="card">
+                    <div class="card__header">SIRACUSA</div>
+                    <img src="IMG/siracusa.jpg" alt="Siracusa" class="card__img">
+                    <p class="card__text">La provincia di Siracusa è conosciuta per il suo straordinario patrimonio storico e archeologico legato all'antica civiltà greca.</p>
+                </article>
+                </a>
+
+                
+                
+                <article class="card">
+                    <div class="card__header">TRAPANI</div>
+                    <img src="IMG/trapani.jpg" alt="Trapani" class="card__img">
+                    <p class="card__text">La provincia di Trapani si distingue per le sue coste suggestive, i borghi storici e le tradizioni legate al mare e alla cultura siciliana.</p>
+                </article>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer">
+        <img src="IMG/logo.png" alt="Logo Sicilia" class="footer__logo">
+    </footer>
+
+    <script>
+        
+        const piazzeToggle = document.getElementById('piazze-toggle');
+        const piazzeTendina = document.getElementById('piazze-tendina');
+        const piazzeOverlay = document.getElementById('piazze-overlay');
+
+        piazzeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (piazzeTendina.classList.contains('piazze-tendina--aperta')) {
+                chiudiTendina();
+            } else {
+                chiudiProvince();
+                piazzeTendina.classList.add('piazze-tendina--aperta');
+                piazzeOverlay.classList.add('piazze-overlay--attivo');
+            }
+        });
+
+        function chiudiTendina() {
+            piazzeTendina.classList.remove('piazze-tendina--aperta');
+            piazzeOverlay.classList.remove('piazze-overlay--attivo');
+        }
+
+        
+        const provinceToggle = document.getElementById('province-toggle');
+        const provinceTendina = document.getElementById('province-tendina');
+        const provinceOverlay = document.getElementById('province-overlay');
+
+        provinceToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (provinceTendina.classList.contains('piazze-tendina--aperta')) {
+                chiudiProvince();
+            } else {
+                chiudiTendina();
+                provinceTendina.classList.add('piazze-tendina--aperta');
+                provinceOverlay.classList.add('piazze-overlay--attivo');
+            }
+        });
+
+        function chiudiProvince() {
+            provinceTendina.classList.remove('piazze-tendina--aperta');
+            provinceOverlay.classList.remove('piazze-overlay--attivo');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { chiudiTendina(); chiudiProvince(); }
+        });
+
+        
+const filtroToggle = document.getElementById('filtro-toggle');
+const filtroDropdown = document.getElementById('filtro-dropdown');
+
+filtroToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    filtroDropdown.classList.toggle('filtro-dropdown--aperto');
+});
+
+document.addEventListener('click', function() {
+    filtroDropdown.classList.remove('filtro-dropdown--aperto');
+});
+
+function selezionaFiltro(valore) {
+    filtroToggle.textContent = valore + ' ▾';
+    filtroDropdown.classList.remove('filtro-dropdown--aperto');
+}
+    </script>
+
+</body>
+</html>

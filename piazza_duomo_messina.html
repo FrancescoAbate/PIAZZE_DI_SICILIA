@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piazza Pirandello - Piazze di Sicilia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="header__brand">
+            <span class="header__title">PIAZZE DI SICILIA</span>
+            <img src="IMG/logo.png" alt="Logo Sicilia" class="header__logo">
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">HOME</a></li>
+                <li><a href="#" class="nav__link" id="province-toggle">PROVINCE</a></li>
+                <li><a href="#" class="nav__link" id="piazze-toggle">PIAZZE</a></li>
+                <li><a href="info.html" class="nav__link">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="piazze-overlay" id="province-overlay" onclick="chiudiProvince()"></div>
+    <div class="piazze-tendina" id="province-tendina">
+        <div class="piazze-tendina__header">
+            <span class="piazze-tendina__titolo">A-Z</span>
+            <button class="piazze-tendina__chiudi" onclick="chiudiProvince()">✕</button>
+        </div>
+        <ul class="piazze-tendina__lista">
+            <li><a href="agrigento.html" class="piazze-tendina__link" style="--i:0">AGRIGENTO</a></li>
+            <li><a href="caltanissetta.html" class="piazze-tendina__link" style="--i:1">CALTANISSETTA</a></li>
+            <li><a href="catania.html" class="piazze-tendina__link" style="--i:2">CATANIA</a></li>
+            <li><a href="enna.html" class="piazze-tendina__link" style="--i:3">ENNA</a></li>
+            <li><a href="messina.html" class="piazze-tendina__link" style="--i:4">MESSINA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:5">PALERMO</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:6">RAGUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:7">SIRACUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:8">TRAPANI</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="piazze-overlay" id="piazze-overlay" onclick="chiudiTendina()"></div>
+    <div class="piazze-tendina" id="piazze-tendina">
+        <div class="piazze-tendina__header">
+    <div class="piazze-tendina__filtro-wrap">
+        <button class="piazze-tendina__titolo piazze-tendina__titolo--btn" id="filtro-toggle">A-Z ▾</button>
+        <ul class="filtro-dropdown" id="filtro-dropdown">
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('A-Z')">A-Z</button></li>
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('PER PROVINCIA')">PER PROVINCIA</button></li>
+            <li><button class="filtro-dropdown__item" onclick="selezionaFiltro('PER METRATURA')">PER METRATURA</button></li>
+        </ul>
+    </div>
+    <div class="piazze-tendina__azioni">
+        <button class="piazze-tendina__lente" title="Cerca">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"/>
+                <line x1="16.5" y1="16.5" x2="22" y2="22"/>
+            </svg>
+        </button>
+        <button class="piazze-tendina__chiudi" onclick="chiudiTendina()">✕</button>
+    </div>
+</div>
+        <ul class="piazze-tendina__lista">
+            <li><a href="piazza_del_duomo.html" class="piazze-tendina__link" style="--i:0">PIAZZA DEL DUOMO - CATANIA</a></li>
+            <li><a href="piazza_duomo_enna.html" class="piazze-tendina__link" style="--i:1">PIAZZA DUOMO - ENNA</a></li>
+            <li><a href="piazza_duomo_messina.html" class="piazze-tendina__link" style="--i:2">PIAZZA DUOMO - MESSINA</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:3">PIAZZA DUOMO DI SAN GIORGIO - RAGUSA</a></li>
+            <li><a href="" class="piazze-tendina__link" style="--i:4">PIAZZA DUOMO - SIRACUSA</a></li>
+            <li><a href="piazza_garibaldi.html" class="piazze-tendina__link" style="--i:5">PIAZZA GARIBALDI - CALTANISSETTA</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:6">PIAZZA LUCATELLI - TRAPANI</a></li>
+            <li><a href="piazza_pirandello.html" class="piazze-tendina__link" style="--i:7">PIAZZA PIRANDELLO - AGRIGENTO</a></li>
+            <li><a href="#" class="piazze-tendina__link" style="--i:8">PIAZZA PRETORIA - PALERMO</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        
+        <section class="hero">
+            <img src="IMG/piazza_duomo_messina.jpg" alt="Piazza Pirandello" class="hero__img">
+            <div class="hero__overlay"></div>
+            <h1 class="hero__title">PIAZZA DUOMO</h1>
+        </section>
+
+        
+        <section class="piazza-intro">
+            <div class="piazza-intro__inner">
+                <img src="IMG/piazza_duomo_messina.jpg" alt="Piazza Pirandello" class="piazza-intro__img">
+                <p class="piazza-intro__testo">
+                    Piazza Duomo a Messina è il cuore storico della città, dominata dalla maestosa Cattedrale di Messina e dalla famosa Torre dell’Orologio con il suo spettacolare orologio astronomico. La piazza è circondata da palazzi storici, caffè e negozi, ed è uno dei principali luoghi di incontro per cittadini e turisti. Ogni giorno qui si svolgono attività sociali, eventi culturali e manifestazioni religiose, rendendo la piazza un simbolo della storia, della cultura e della vita comunitaria di Messina.
+                </p>
+            </div>
+           
+        </section>
+
+        
+        <section class="piazza-approfondimento">
+            <div class="approfondimento-card">
+                <p class="approfondimento-card__testo">
+                    Piazza Duomo rappresenta un vero e proprio centro di vita culturale e sociale per Messina. È il luogo dove tradizione e quotidianità si incontrano, con cittadini che si ritrovano per eventi pubblici, celebrazioni religiose e attività culturali. L’imponente architettura della cattedrale e della torre dell’orologio, insieme agli edifici storici circostanti, trasmette il senso di una città che ha saputo preservare la propria identità attraverso secoli di storia e che continua a vivere intensamente il proprio spazio urbano.
+                </p>
+                <img src="IMG/appr_messina.png" alt="Approfondimento Agrigento" class="approfondimento-card__img">
+            </div>
+        </section>
+
+        
+        <section class="galleria">
+            <img src="IMG/piazza_duomo_messina_1.jpg" alt="Piazza Pirandello 1" class="galleria__img" onclick="apriLightbox(this.src)">
+            <img src="IMG/piazza_duomo_messina_2.jfif" alt="Piazza Pirandello 2" class="galleria__img" onclick="apriLightbox(this.src)">
+        </section>
+
+    </main>
+
+    
+    <footer class="footer">
+        <img src="IMG/logo.png" alt="Logo Sicilia" class="footer__logo">
+    </footer>
+
+    
+    <div class="lightbox" id="lightbox" onclick="chiudiLightbox()">
+        <button class="lightbox__chiudi" onclick="chiudiLightbox()">✕</button>
+        <img src="" alt="" class="lightbox__img" id="lightbox-img" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        function apriLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('lightbox--attivo');
+            document.body.style.overflow = 'hidden';
+        }
+        function chiudiLightbox() {
+            document.getElementById('lightbox').classList.remove('lightbox--attivo');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') chiudiLightbox();
+        });
+    </script>
+
+    <script>
+        
+        const piazzeToggle = document.getElementById('piazze-toggle');
+        const piazzeTendina = document.getElementById('piazze-tendina');
+        const piazzeOverlay = document.getElementById('piazze-overlay');
+
+        piazzeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (piazzeTendina.classList.contains('piazze-tendina--aperta')) {
+                chiudiTendina();
+            } else {
+                chiudiProvince();
+                piazzeTendina.classList.add('piazze-tendina--aperta');
+                piazzeOverlay.classList.add('piazze-overlay--attivo');
+            }
+        });
+
+        function chiudiTendina() {
+            piazzeTendina.classList.remove('piazze-tendina--aperta');
+            piazzeOverlay.classList.remove('piazze-overlay--attivo');
+        }
+
+        
+        const provinceToggle = document.getElementById('province-toggle');
+        const provinceTendina = document.getElementById('province-tendina');
+        const provinceOverlay = document.getElementById('province-overlay');
+
+        provinceToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (provinceTendina.classList.contains('piazze-tendina--aperta')) {
+                chiudiProvince();
+            } else {
+                chiudiTendina();
+                provinceTendina.classList.add('piazze-tendina--aperta');
+                provinceOverlay.classList.add('piazze-overlay--attivo');
+            }
+        });
+
+        function chiudiProvince() {
+            provinceTendina.classList.remove('piazze-tendina--aperta');
+            provinceOverlay.classList.remove('piazze-overlay--attivo');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { chiudiTendina(); chiudiProvince(); }
+        });
+
+        
+const filtroToggle = document.getElementById('filtro-toggle');
+const filtroDropdown = document.getElementById('filtro-dropdown');
+
+filtroToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    filtroDropdown.classList.toggle('filtro-dropdown--aperto');
+});
+
+document.addEventListener('click', function() {
+    filtroDropdown.classList.remove('filtro-dropdown--aperto');
+});
+
+function selezionaFiltro(valore) {
+    filtroToggle.textContent = valore + ' ▾';
+    filtroDropdown.classList.remove('filtro-dropdown--aperto');
+}
+    </script>
+
+</body>
+</html>

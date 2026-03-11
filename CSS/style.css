@@ -189,6 +189,7 @@ body {
     line-height: 1.6;
      color: var(--teal-dark);
     flex: 1;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -242,7 +243,7 @@ body {
     margin: 0 auto;
 }
 .piazze__titolo {
-    font-family: 'Cinzel', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -461,7 +462,7 @@ body {
     display: block;
     background-color: var(--teal);
     color: #ffffff;
-    font-family: 'Cinzel', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 0.88rem;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -1054,6 +1055,7 @@ body {
         height: 70px;
     }
 }
+
 
 
 

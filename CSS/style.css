@@ -887,12 +887,12 @@ body {
 
     
     .piazze-tendina {
-        width: 85vw;
-    }
-
-    .piazze-tendina {
     width: 100%;
     right: -100%;
+}
+
+.piazze-tendina--aperta {
+    right: 0;
 }
     
     .footer__logo {
@@ -1052,6 +1052,7 @@ body {
         height: 70px;
     }
 }
+
 
 
 

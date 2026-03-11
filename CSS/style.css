@@ -19,6 +19,7 @@ body {
     background-color: var(--bg);
     font-family: 'Lato', sans-serif;
     color: var(--text-body);
+    overflow-x: hidden;
 }
 
 
@@ -889,6 +890,10 @@ body {
         width: 85vw;
     }
 
+    .piazze-tendina {
+    width: 100%;
+    right: -100%;
+}
     
     .footer__logo {
         height: 70px;
@@ -1047,6 +1052,7 @@ body {
         height: 70px;
     }
 }
+
 
 
 

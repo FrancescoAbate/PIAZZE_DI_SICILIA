@@ -1,4 +1,5 @@
 
+
 :root {
     --teal:        #3d6b6b;
     --teal-dark:   #2e5151;
@@ -236,9 +237,61 @@ body {
 }
 
 
-/* ============================================
-   TENDINA (usata dal menu PROVINCE in header)
-   ============================================ */
+
+.piazze {
+    padding: 1rem 4rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.piazze__titolo {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--teal-dark);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.piazze__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.piazza-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.piazza-card:hover {
+    box-shadow: 0 10px 32px rgba(0,0,0,0.26);
+    transform: translateY(-3px);
+}
+
+.piazza-card__header {
+    background-color: var(--teal);
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 0.65rem 1rem;
+    text-align: center;
+}
+
+.piazza-card__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+
 
 .piazze-overlay {
     display: none;
@@ -279,6 +332,94 @@ body {
     height: 64px;
     flex-shrink: 0;
     position: relative;
+}
+
+.piazze-tendina__azioni {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.piazze-tendina__lente {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.piazze-tendina__lente:hover {
+    background-color: #ffffff;
+    color: var(--teal-dark);
+}
+
+.piazze-tendina__filtro-wrap {
+    position: relative;
+}
+
+.piazze-tendina__titolo--btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.piazze-tendina__titolo--btn:hover {
+    background-color: #ffffff;
+    color: var(--teal-dark);
+}
+
+.filtro-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    background-color: var(--teal-header);
+    border-radius: 0 0 12px 12px;
+    list-style: none;
+    overflow: visible;
+    min-width: 180px;
+    z-index: 400;
+}
+
+.filtro-dropdown--aperto {
+    display: block;
+}
+
+.filtro-dropdown__item {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+    opacity: 0.88;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.filtro-dropdown__item:hover {
+    background-color: #ffffff;
+    color: var(--teal-dark);
+    opacity: 1;
 }
 
 .piazze-tendina__titolo {
@@ -346,92 +487,6 @@ body {
 .piazze-tendina__link:hover {
     background-color: var(--teal-dark);
     transform: scale(1.02);
-}
-
-
-/* ============================================
-   PIAZZE — pagina completa (sostituisce la
-   vecchia tendina di filtro sotto PIAZZE)
-   ============================================ */
-
-.piazze-toolbar {
-    background-color: var(--teal-header);
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    height: 44px;
-}
-
-.piazze-toolbar__az {
-    font-family: 'Lato', sans-serif;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    opacity: 0.9;
-}
-
-.piazze {
-    padding: 3rem 4rem 4rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.piazze-provincia {
-    margin-bottom: 3.5rem;
-}
-
-.piazze-provincia:last-child {
-    margin-bottom: 0;
-}
-
-.piazze-provincia__titolo {
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    color: var(--teal-dark);
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.piazze__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.piazza-card {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.25s, transform 0.25s;
-}
-
-.piazza-card:hover {
-    box-shadow: 0 10px 32px rgba(0,0,0,0.26);
-    transform: translateY(-3px);
-}
-
-.piazza-card__header {
-    background-color: var(--teal);
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    padding: 0.65rem 1rem;
-    text-align: center;
-}
-
-.piazza-card__img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
 }
 
 
@@ -657,6 +712,7 @@ body {
 
 @media (max-width: 900px) {
 
+    
     .header {
         padding: 0 1.5rem;
     }
@@ -673,10 +729,12 @@ body {
         gap: 0.8rem;
     }
 
+    
     .hero {
         height: 260px;
     }
 
+    
     .province {
         padding: 2.5rem 1.5rem;
     }
@@ -686,12 +744,9 @@ body {
         gap: 1.5rem;
     }
 
-    .piazze-toolbar {
-        padding: 0 1.5rem;
-    }
-
+    
     .piazze {
-        padding: 2.5rem 2rem 3rem;
+        padding: 1rem 2rem 3rem;
     }
 
     .piazze__grid {
@@ -699,6 +754,7 @@ body {
         max-width: 100%;
     }
 
+    
     .piazza-intro {
         padding: 0 1.5rem;
     }
@@ -711,6 +767,7 @@ body {
         padding: 0 1.5rem;
     }
 
+    
     .piazze-tendina {
         width: 320px;
     }
@@ -719,6 +776,7 @@ body {
 
 @media (max-width: 580px) {
 
+    
     .header {
         padding: 0.6rem 1rem 1rem;
         height: auto;
@@ -751,6 +809,8 @@ body {
         letter-spacing: 0.06em;
     }
 
+
+    
     .hero {
         height: 200px;
     }
@@ -759,6 +819,7 @@ body {
         font-size: clamp(1.4rem, 7vw, 2.2rem);
     }
 
+    
     .province {
         padding: 1.5rem 1rem;
     }
@@ -768,12 +829,9 @@ body {
         gap: 1.2rem;
     }
 
-    .piazze-toolbar {
-        padding: 0 1rem;
-    }
-
+    
     .piazze {
-        padding: 1.5rem 1rem 2.5rem;
+        padding: 1rem 1rem 2.5rem;
     }
 
     .piazze__grid {
@@ -781,6 +839,7 @@ body {
         max-width: 100%;
     }
 
+    
     .piazza-intro {
         margin-top: 2rem;
         padding: 0 1rem;
@@ -818,6 +877,7 @@ body {
         margin-bottom: 2.5rem;
     }
 
+    
     .info-text {
         margin: 2rem auto 1.5rem;
         padding: 0 1rem;
@@ -827,17 +887,18 @@ body {
         padding: 1rem 1rem 3rem;
     }
 
-    .piazze-tendina {
-        width: 100vw;
-        max-width: 100vw;
-        right: -100vw;
-        z-index: 9999;
-    }
+    
+   .piazze-tendina {
+    width: 100vw;
+    max-width: 100vw;
+    right: -100vw;
+    z-index: 9999;
+}
 
-    .piazze-tendina--aperta {
-        right: 0 !important;
-    }
-
+.piazze-tendina--aperta {
+    right: 0 !important;
+}
+    
     .footer__logo {
         height: 70px;
     }
@@ -845,18 +906,18 @@ body {
 
 @media (max-width: 480px) {
 
-    .header {
+.header {
         z-index: 400;
     }
-
-    .piazze-overlay {
+    
+.piazze-overlay {
         z-index: 250;
     }
 
     .piazze-tendina {
         z-index: 350;
     }
-
+    
     .header {
         padding: 0.6rem 1rem 1rem;
         height: auto;
@@ -889,6 +950,7 @@ body {
         letter-spacing: 0.06em;
     }
 
+    
     .hero {
         height: 200px;
     }
@@ -897,6 +959,7 @@ body {
         font-size: clamp(1.4rem, 7vw, 2.2rem);
     }
 
+    
     .province {
         padding: 1.5rem 1rem;
     }
@@ -906,8 +969,9 @@ body {
         gap: 1.2rem;
     }
 
+    
     .piazze {
-        padding: 1.5rem 1rem 2.5rem;
+        padding: 1rem 1rem 2.5rem;
     }
 
     .piazze__grid {
@@ -915,6 +979,7 @@ body {
         max-width: 100%;
     }
 
+    
     .piazza-intro {
         margin-top: 2rem;
         padding: 0 1rem;
@@ -952,6 +1017,7 @@ body {
         margin-bottom: 2.5rem;
     }
 
+    
     .info-text {
         margin: 2rem auto 1.5rem;
         padding: 0 1rem;
@@ -961,18 +1027,19 @@ body {
         padding: 1rem 1rem 3rem;
     }
 
-    .piazze-tendina {
-        width: 100%;
-        right: -100%;
-        top: 0;
-        padding-top: 120px;
-        height: 100dvh;
-        overflow-y: auto;
-    }
+    
+   .piazze-tendina {
+    width: 100%;
+    right: -100%;
+    top: 0;
+    padding-top: 120px;
+    height: 100dvh;
+    overflow-y: auto;
+}
 
-    .piazze-tendina--aperta {
-        right: 0;
-    }
+.piazze-tendina--aperta {
+    right: 0;
+}
 
     .piazze-tendina__lista {
         padding: 1.5rem 1rem;
@@ -984,7 +1051,20 @@ body {
         padding: 0.85rem 1rem;
     }
 
+    
     .footer__logo {
         height: 70px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

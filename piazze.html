@@ -1,214 +1,204 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piazze | Piazze di Sicilia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piazze | Piazze di Sicilia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="header__brand">
-        <img class="header__logo" src="img/logo.svg" alt="Piazze di Sicilia">
-        <span class="header__title">PIAZZE DI SICILIA</span>
-    </div>
-    <nav>
-        <ul class="nav__list">
-            <li><a class="nav__link" href="index.html">HOME</a></li>
-            <li><a class="nav__link" href="province.html">PROVINCE</a></li>
-            <li><a class="nav__link" href="piazze.html">PIAZZE</a></li>
-            <li><a class="nav__link" href="info.html">INFO</a></li>
+    <header class="header">
+        <div class="header__brand">
+            <span class="header__title">PIAZZE DI SICILIA</span>
+            <img src="IMG/logo.png" alt="Logo Sicilia" class="header__logo">
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">HOME</a></li>
+                <li><a href="#" class="nav__link" id="province-toggle">PROVINCE</a></li>
+                <li><a href="piazze.html" class="nav__link">PIAZZE</a></li>
+                <li><a href="info.html" class="nav__link">INFO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="piazze-overlay" id="province-overlay" onclick="chiudiProvince()"></div>
+    <div class="piazze-tendina" id="province-tendina">
+        <div class="piazze-tendina__header">
+            <span class="piazze-tendina__titolo">A-Z</span>
+            <button class="piazze-tendina__chiudi" onclick="chiudiProvince()">✕</button>
+        </div>
+        <ul class="piazze-tendina__lista">
+            <li><a href="agrigento.html" class="piazze-tendina__link" style="--i:0">AGRIGENTO</a></li>
+            <li><a href="caltanissetta.html" class="piazze-tendina__link" style="--i:1">CALTANISSETTA</a></li>
+            <li><a href="catania.html" class="piazze-tendina__link" style="--i:2">CATANIA</a></li>
+            <li><a href="enna.html" class="piazze-tendina__link" style="--i:3">ENNA</a></li>
+            <li><a href="messina.html" class="piazze-tendina__link" style="--i:4">MESSINA</a></li>
+            <li><a href="palermo.html" class="piazze-tendina__link" style="--i:5">PALERMO</a></li>
+            <li><a href="ragusa.html" class="piazze-tendina__link" style="--i:6">RAGUSA</a></li>
+            <li><a href="siracusa.html" class="piazze-tendina__link" style="--i:7">SIRACUSA</a></li>
+            <li><a href="trapani.html" class="piazze-tendina__link" style="--i:8">TRAPANI</a></li>
         </ul>
-    </nav>
-</header>
+    </div>
 
-<!-- HERO -->
-<section class="hero">
-    <img class="hero__img" src="https://picsum.photos/seed/sicilia-skyline/1600/700" alt="Panorama di una città siciliana">
-    <div class="hero__overlay"></div>
-    <h1 class="hero__title">PIAZZE</h1>
-</section>
+    <main>
 
-<!-- BARRA A-Z (sostituisce la tendina laterale) -->
-<div class="piazze-toolbar">
-    <a class="piazze-toolbar__az" href="#agrigento">A-Z</a>
-</div>
+        <section class="hero">
+            <img src="IMG/hero.jpg" alt="Sicilia" class="hero__img">
+            <div class="hero__overlay"></div>
+            <h1 class="hero__title">PIAZZE</h1>
+        </section>
 
-<!-- ELENCO PIAZZE RAGGRUPPATO PER PROVINCIA -->
-<main class="piazze">
-
-    <section class="piazze-provincia" id="agrigento">
-        <h2 class="piazze-provincia__titolo">AGRIGENTO</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-pirandello-agrigento.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA PIRANDELLO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/agrigento-pirandello/500/400" alt="Piazza Pirandello, Agrigento">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-cavour-agrigento.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA CAVOUR</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/agrigento-cavour/500/400" alt="Piazza Cavour, Agrigento">
-                </article>
-            </a>
+        <div class="piazze-toolbar">
+            <a class="piazze-toolbar__az" href="#agrigento">A-Z</a>
         </div>
-    </section>
 
-    <section class="piazze-provincia" id="caltanissetta">
-        <h2 class="piazze-provincia__titolo">CALTANISSETTA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-garibaldi-caltanissetta.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA GARIBALDI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/caltanissetta-garibaldi/500/400" alt="Piazza Garibaldi, Caltanissetta">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-marconi-caltanissetta.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA MARCONI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/caltanissetta-marconi/500/400" alt="Piazza Marconi, Caltanissetta">
-                </article>
-            </a>
-        </div>
-    </section>
+        <section class="piazze">
 
-    <section class="piazze-provincia" id="catania">
-        <h2 class="piazze-provincia__titolo">CATANIA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-del-duomo-catania.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DEL DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/catania-duomo/500/400" alt="Piazza del Duomo, Catania">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-stesicoro-catania.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA STESICORO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/catania-stesicoro/500/400" alt="Piazza Stesicoro, Catania">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="agrigento">
+                <h2 class="piazze-provincia__titolo">AGRIGENTO</h2>
+                <div class="piazze__grid">
+                    <a href="piazza_pirandello.html" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA PIRANDELLO</div>
+                            <img src="IMG/piazza_pirandello.jpg" alt="Piazza Pirandello, Agrigento" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="enna">
-        <h2 class="piazze-provincia__titolo">ENNA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-duomo-enna.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/enna-duomo/500/400" alt="Piazza Duomo, Enna">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-vittorio-emanuele-enna.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA VITTORIO EMANUELE</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/enna-vittorio/500/400" alt="Piazza Vittorio Emanuele, Enna">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="caltanissetta">
+                <h2 class="piazze-provincia__titolo">CALTANISSETTA</h2>
+                <div class="piazze__grid">
+                    <a href="piazza_garibaldi.html" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA GARIBALDI</div>
+                            <img src="IMG/piazza_garibaldi.jpg" alt="Piazza Garibaldi, Caltanissetta" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="messina">
-        <h2 class="piazze-provincia__titolo">MESSINA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-duomo-messina.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/messina-duomo/500/400" alt="Piazza Duomo, Messina">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-cairoli-messina.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA CAIROLI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/messina-cairoli/500/400" alt="Piazza Cairoli, Messina">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="catania">
+                <h2 class="piazze-provincia__titolo">CATANIA</h2>
+                <div class="piazze__grid">
+                    <a href="piazza_del_duomo.html" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA DEL DUOMO</div>
+                            <img src="IMG/piazza_del_duomo.jpg" alt="Piazza del Duomo, Catania" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="palermo">
-        <h2 class="piazze-provincia__titolo">PALERMO</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-garibaldi-palermo.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA GARIBALDI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/palermo-garibaldi/500/400" alt="Piazza Garibaldi, Palermo">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-marconi-palermo.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA MARCONI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/palermo-marconi/500/400" alt="Piazza Marconi, Palermo">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="enna">
+                <h2 class="piazze-provincia__titolo">ENNA</h2>
+                <div class="piazze__grid">
+                    <a href="piazza_duomo_enna.html" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA DUOMO</div>
+                            <img src="IMG/piazza_duomo_enna.jpg" alt="Piazza Duomo, Enna" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="ragusa">
-        <h2 class="piazze-provincia__titolo">RAGUSA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-del-duomo-ragusa.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DEL DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/ragusa-duomo/500/400" alt="Piazza del Duomo, Ragusa">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-stesicoro-ragusa.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA STESICORO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/ragusa-stesicoro/500/400" alt="Piazza Stesicoro, Ragusa">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="messina">
+                <h2 class="piazze-provincia__titolo">MESSINA</h2>
+                <div class="piazze__grid">
+                    <a href="piazza_duomo_messina.html" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA DUOMO</div>
+                            <img src="IMG/piazza_duomo_messina.jpg" alt="Piazza Duomo, Messina" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="siracusa">
-        <h2 class="piazze-provincia__titolo">SIRACUSA</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-duomo-siracusa.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/siracusa-duomo/500/400" alt="Piazza Duomo, Siracusa">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-vittorio-emanuele-siracusa.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA VITTORIO EMANUELE</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/siracusa-vittorio/500/400" alt="Piazza Vittorio Emanuele, Siracusa">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="palermo">
+                <h2 class="piazze-provincia__titolo">PALERMO</h2>
+                <div class="piazze__grid">
+                    <a href="#" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA PRETORIA</div>
+                            <img src="IMG/piazza_pretoria.jpg" alt="Piazza Pretoria, Palermo" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-    <section class="piazze-provincia" id="trapani">
-        <h2 class="piazze-provincia__titolo">TRAPANI</h2>
-        <div class="piazze__grid">
-            <a class="card-link" href="piazza-duomo-trapani.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA DUOMO</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/trapani-duomo/500/400" alt="Piazza Duomo, Trapani">
-                </article>
-            </a>
-            <a class="card-link" href="piazza-cairoli-trapani.html">
-                <article class="piazza-card">
-                    <div class="piazza-card__header">PIAZZA CAIROLI</div>
-                    <img class="piazza-card__img" src="https://picsum.photos/seed/trapani-cairoli/500/400" alt="Piazza Cairoli, Trapani">
-                </article>
-            </a>
-        </div>
-    </section>
+            <div class="piazze-provincia" id="ragusa">
+                <h2 class="piazze-provincia__titolo">RAGUSA</h2>
+                <div class="piazze__grid">
+                    <a href="#" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA DUOMO DI SAN GIORGIO</div>
+                            <img src="IMG/piazza_duomo_san_giorgio.jpg" alt="Piazza Duomo di San Giorgio, Ragusa" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-</main>
+            <div class="piazze-provincia" id="siracusa">
+                <h2 class="piazze-provincia__titolo">SIRACUSA</h2>
+                <div class="piazze__grid">
+                    <a href="#" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA DUOMO</div>
+                            <img src="IMG/piazza_duomo_siracusa.jpg" alt="Piazza Duomo, Siracusa" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <img class="footer__logo" src="img/logo.svg" alt="Piazze di Sicilia">
-</footer>
+            <div class="piazze-provincia" id="trapani">
+                <h2 class="piazze-provincia__titolo">TRAPANI</h2>
+                <div class="piazze__grid">
+                    <a href="#" class="card-link">
+                        <article class="piazza-card">
+                            <div class="piazza-card__header">PIAZZA LUCATELLI</div>
+                            <img src="IMG/piazza_lucatelli.jpg" alt="Piazza Lucatelli, Trapani" class="piazza-card__img">
+                        </article>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img src="IMG/logo.png" alt="Logo Sicilia" class="footer__logo">
+    </footer>
+
+    <script>
+
+        const provinceToggle = document.getElementById('province-toggle');
+        const provinceTendina = document.getElementById('province-tendina');
+        const provinceOverlay = document.getElementById('province-overlay');
+
+        provinceToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (provinceTendina.classList.contains('piazze-tendina--aperta')) {
+                chiudiProvince();
+            } else {
+                provinceTendina.classList.add('piazze-tendina--aperta');
+                provinceOverlay.classList.add('piazze-overlay--attivo');
+            }
+        });
+
+        function chiudiProvince() {
+            provinceTendina.classList.remove('piazze-tendina--aperta');
+            provinceOverlay.classList.remove('piazze-overlay--attivo');
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { chiudiProvince(); }
+        });
+
+    </script>
 
 </body>
 </html>

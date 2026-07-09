@@ -129,26 +129,6 @@
     </footer>
 
     <script>
-        
-        const piazzeToggle = document.getElementById('piazze-toggle');
-        const piazzeTendina = document.getElementById('piazze-tendina');
-        const piazzeOverlay = document.getElementById('piazze-overlay');
-
-        piazzeToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (piazzeTendina.classList.contains('piazze-tendina--aperta')) {
-                chiudiTendina();
-            } else {
-                chiudiProvince();
-                piazzeTendina.classList.add('piazze-tendina--aperta');
-                piazzeOverlay.classList.add('piazze-overlay--attivo');
-            }
-        });
-
-        function chiudiTendina() {
-            piazzeTendina.classList.remove('piazze-tendina--aperta');
-            piazzeOverlay.classList.remove('piazze-overlay--attivo');
-        }
 
         
         const provinceToggle = document.getElementById('province-toggle');

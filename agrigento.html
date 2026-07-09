@@ -130,7 +130,13 @@
 
     <script>
         
-    if (piazzeTendina.classList.contains('piazze-tendina--aperta')) {
+        const piazzeToggle = document.getElementById('piazze-toggle');
+        const piazzeTendina = document.getElementById('piazze-tendina');
+        const piazzeOverlay = document.getElementById('piazze-overlay');
+
+        piazzeToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (piazzeTendina.classList.contains('piazze-tendina--aperta')) {
                 chiudiTendina();
             } else {
                 chiudiProvince();

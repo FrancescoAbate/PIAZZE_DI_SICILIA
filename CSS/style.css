@@ -52,6 +52,11 @@ body {
     color: inherit;
 }
 
+.header__brand,
+.header__brand * {
+    text-decoration: none !important;
+}
+
 .header__title {
     font-family: 'Lato', sans-serif;
     color: #ffffff;
